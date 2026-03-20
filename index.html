@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hội Phụ nữ Học viện Quốc phòng - Kỷ niệm 80 năm</title>
+  <title>Hội Phụ nữ Học viện Quốc phòng - Kỷ niệm 70 năm ngày truyền thống Học viện</title>
   <meta name="description" content="Chuyên trang kỷ niệm 80 năm Ngày thành lập Học viện Quốc phòng - Hội Phụ nữ Học viện Quốc phòng." />
   <style>
     :root {
@@ -30,9 +30,8 @@
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 20% 20%, rgba(221,177,74,0.10), transparent 24%),
-        radial-gradient(circle at 80% 10%, rgba(163,23,23,0.08), transparent 25%),
-        linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
+        linear-gradient(180deg, rgba(255,253,248,0.96) 0%, rgba(255,250,244,0.96) 100%),
+        url('Background5.png') center top/1400px auto repeat-y;
       line-height: 1.6;
     }
 
@@ -66,9 +65,10 @@
       position: relative;
       overflow: hidden;
       background:
-        linear-gradient(140deg, rgba(9,30,78,0.96), rgba(15,45,104,0.92) 48%, rgba(163,23,23,0.90) 100%);
+        linear-gradient(180deg, rgba(9,30,78,0.35), rgba(15,45,104,0.55)),
+        url('Hoc vien Quoc phong F2.jpg') center/cover no-repeat;
       color: white;
-      min-height: 620px;
+      min-height: 520px;
     }
 
     .hero::before {
@@ -85,17 +85,9 @@
     .hero::after {
       content: "";
       position: absolute;
-      width: 820px;
-      height: 820px;
-      left: 50%;
-      top: 58%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background:
-        radial-gradient(circle, rgba(221,177,74,0.14) 0 32%, rgba(221,177,74,0.06) 33% 48%, transparent 49% 100%);
-      opacity: 0.6;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(8,28,74,0.78) 0%, rgba(12,41,103,0.62) 45%, rgba(163,23,23,0.25) 100%);
       pointer-events: none;
-      filter: blur(0.5px);
     }
 
     nav {
@@ -172,7 +164,7 @@
     .hero-inner {
       position: relative;
       z-index: 1;
-      padding: 72px 0 84px;
+      padding: 56px 0 64px;
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
       gap: 34px;
@@ -195,18 +187,19 @@
     .hero h1 {
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(32px, 5vw, 58px);
-      line-height: 1.12;
+      font-size: clamp(26px, 4.2vw, 44px);
+      line-height: 1.2;
       letter-spacing: 0.3px;
     }
 
-    .hero h1 span { color: #ffd978; }
+    .hero h1 span { color: #ffe08a; text-shadow: 0 3px 14px rgba(0,0,0,0.28); }
 
     .hero p {
-      margin: 18px 0 28px;
+      margin: 16px 0 24px;
       max-width: 680px;
-      color: rgba(255,255,255,0.88);
+      color: rgba(255,255,255,0.94);
       font-size: 18px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.24);
     }
 
     .cta-row {
@@ -283,7 +276,7 @@
     }
 
     .panel-card {
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.96);
       color: var(--text);
       border-radius: 22px;
       padding: 18px;
@@ -695,7 +688,7 @@
 <body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <div>Hội Phụ nữ Học viện Quốc phòng • Chuyên trang kỷ niệm 80 năm</div>
+      <div>Học viện Quốc phòng • Chuyên trang kỷ niệm 80 năm Ngày thành lập</div>
       <div class="topbar-links">
         <a href="#gioi-thieu">Giới thiệu</a>
         <a href="#bai-viet">Bài viết</a>
@@ -709,7 +702,7 @@
     <div class="container nav-inner">
       <div class="brand">
         <div class="brand-badge">80</div>
-        <div class="brand-text">Hội Phụ nữ Học viện Quốc phòng</div>
+        <div class="brand-text">Học viện Quốc phòng</div>
       </div>
       <div class="menu">
         <a href="#">Trang chủ</a>
@@ -726,9 +719,8 @@
   <header class="hero">
     <div class="container hero-inner">
       <div class="reveal">
-        <div class="eyebrow">🌸 Tự hào truyền thống • Lan tỏa giá trị tốt đẹp</div>
-        <h1>HỘI PHỤ NỮ <span>HỌC VIỆN QUỐC PHÒNG</span><br/>Chuyên trang kỷ niệm 80 năm</h1>
-        <p>Kết nối truyền thống vẻ vang với tinh thần đổi mới, sáng tạo và trách nhiệm của phụ nữ Học viện trong thời kỳ mới. Trang chuyên đề giới thiệu lịch sử, hoạt động nổi bật, bài viết tìm hiểu và trò chơi kiến thức ý nghĩa.</p>
+        <h1>HỌC VIỆN QUỐC PHÒNG<br/><span>Chuyên trang kỷ niệm 80 năm</span></h1>
+        <p>Chuyên trang giới thiệu lịch sử hình thành và phát triển, các dấu mốc nổi bật, hoạt động tiêu biểu, tư liệu hình ảnh - video và những nội dung tương tác ý nghĩa hướng tới kỷ niệm 80 năm Ngày thành lập Học viện Quốc phòng.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#timeline">Khám phá lịch sử</a>
           <a class="btn btn-secondary" href="#tro-choi">Chơi thử quiz</a>
@@ -740,7 +732,7 @@
           </div>
           <div class="stat">
             <strong>5 chuyên mục</strong>
-            <span>Lịch sử, hoạt động, bài viết, game, thư viện</span>
+            <span>Lịch sử, hoạt động, bài viết, thư viện và tương tác</span>
           </div>
           <div class="stat">
             <strong>100%</strong>
@@ -756,9 +748,9 @@
           <p>Thiết kế timeline sang trọng, dễ đọc, giúp người xem theo dõi hành trình hình thành và phát triển của Học viện qua các giai đoạn.</p>
         </div>
         <div class="panel-card">
-          <div class="panel-label">Tương tác hiện đại</div>
-          <h3>Trò chơi kiến thức & thư viện số</h3>
-          <p>Kết hợp trắc nghiệm, ô chữ, lật thẻ, thư viện ảnh và video để tăng trải nghiệm mà vẫn giữ tinh thần trang trọng của chuyên trang kỷ niệm.</p>
+          <div class="panel-label">Không gian thông tin số</div>
+          <h3>Thư viện tư liệu và nội dung tương tác</h3>
+          <p>Kết hợp bài viết, thư viện ảnh - video và các chuyên mục tương tác phù hợp để tăng trải nghiệm mà vẫn giữ tinh thần trang trọng của chuyên trang kỷ niệm.</p>
         </div>
       </div>
     </div>
