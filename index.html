@@ -18,68 +18,74 @@
       line-height: 1.5;
     }
 
-    /* ===== HEADER BANNER NHƯ TRANG TIN TỨC ===== */
-    .top-banner {
-      position: relative;
-      width: 100%;
-      background: #2c4a3e;
-      overflow: hidden;
+    /* ===== HEADER BANNER VỪA PHẢI NHƯ TRANG TIN TỨC ===== */
+    .top-header {
+      background: #2c5a4a;
+    }
+
+    .banner-wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 20px 40px 0;
+      background: #2c5a4a;
     }
 
     .banner-container {
-      max-width: 1400px;
-      margin: 0 auto;
       position: relative;
+      border-radius: 20px 20px 0 0;
+      overflow: hidden;
     }
 
     .banner-image {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 180px;
       object-fit: cover;
+      object-position: center 30%;
+      display: block;
     }
 
-    /* Logo ghép trên banner */
+    /* Logo ghép trên banner nhỏ gọn */
     .logo-overlay {
       position: absolute;
-      top: 20px;
-      left: 40px;
+      bottom: -25px;
+      left: 30px;
       z-index: 10;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(4px);
-      padding: 12px 24px;
-      border-radius: 60px;
+      background: white;
+      padding: 10px 24px;
+      border-radius: 50px;
       display: flex;
       align-items: center;
-      gap: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      border: 1px solid rgba(200, 160, 100, 0.3);
+      gap: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      border: 1px solid #f0e4d6;
     }
 
     .logo-overlay img {
-      height: 55px;
+      height: 48px;
       width: auto;
     }
 
     .logo-overlay .logo-text {
-      font-weight: 600;
-      color: #2c5a4a;
-      font-size: 1rem;
+      font-weight: 500;
+      color: #5a6e62;
+      font-size: 0.85rem;
       border-left: 2px solid #c99a6b;
-      padding-left: 16px;
+      padding-left: 14px;
     }
 
     .logo-overlay .logo-text strong {
       display: block;
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: #b86b2c;
     }
 
-    /* Thanh menu dưới banner */
+    /* ===== MENU NGANG NỔI BẬT ===== */
     .nav-bar {
-      background: white;
-      border-bottom: 1px solid #f0e4d6;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      background: #b86b2c;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .nav-container {
@@ -92,135 +98,115 @@
       display: flex;
       justify-content: center;
       gap: 48px;
-      padding: 16px 0;
+      padding: 14px 0;
       flex-wrap: wrap;
     }
 
     .nav-menu a {
       text-decoration: none;
-      color: #5a6e62;
-      font-weight: 500;
-      font-size: 0.95rem;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
       transition: 0.2s;
       padding: 6px 0;
-      border-bottom: 2px solid transparent;
+      letter-spacing: 0.5px;
     }
 
     .nav-menu a:hover {
-      color: #b86b2c;
-      border-bottom-color: #b86b2c;
+      color: #ffdd99;
+      transform: translateY(-1px);
     }
 
-    /* ===== SECTION KỶ NIỆM 50 NĂM - THIẾT KẾ ĐẸP MẮT ===== */
+    /* ===== SECTION KỶ NIỆM 50 NĂM ===== */
     .anniversary-section {
-      background: linear-gradient(135deg, #fefaf5 0%, #fff8ef 100%);
-      padding: 60px 0 40px;
+      background: linear-gradient(135deg, #fffaf2 0%, #fffef8 100%);
+      padding: 50px 0 40px;
       text-align: center;
-      border-bottom: 1px solid #f0e4d6;
     }
 
-    .anniversary-container {
+    .container {
       max-width: 1300px;
       margin: 0 auto;
       padding: 0 40px;
     }
 
-    /* Hiệu ứng chữ kỷ niệm đẹp */
     .anniversary-badge {
       display: inline-flex;
-      align-items: center;
-      gap: 20px;
-      background: linear-gradient(135deg, #fff5e8, #fffaf2);
-      padding: 12px 32px;
-      border-radius: 80px;
-      margin-bottom: 30px;
-      border: 1px solid #e5d5be;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      align-items: baseline;
+      gap: 15px;
+      background: #f5ede0;
+      padding: 8px 28px;
+      border-radius: 60px;
+      margin-bottom: 25px;
     }
 
-    .anniversary-badge .year-big {
-      font-size: 2.2rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #b86b2c, #d48c54);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      letter-spacing: 2px;
-    }
-
-    .anniversary-badge .separator {
-      width: 2px;
-      height: 40px;
-      background: #e5d5be;
-    }
-
-    .anniversary-badge .year-small {
-      font-size: 1.8rem;
-      font-weight: 700;
+    .anniversary-badge .year-label {
+      font-size: 1rem;
+      font-weight: 600;
       color: #b86b2c;
       letter-spacing: 1px;
     }
 
-    .main-title {
-      margin-bottom: 25px;
+    .anniversary-badge .year-number {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #b86b2c;
     }
 
     .main-title h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
       font-weight: 700;
       color: #2c5a4a;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.3px;
     }
 
     .main-title h1 span {
       display: block;
-      font-size: 0.65em;
+      font-size: 0.7em;
       color: #b86b2c;
       font-weight: 500;
       margin-top: 8px;
-      letter-spacing: 2px;
     }
 
     .slogan {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #7c8c80;
       font-style: italic;
       margin-top: 20px;
-      padding: 16px 32px;
+      padding: 12px 24px;
       display: inline-block;
-      border-top: 2px solid #e5d5be;
-      border-bottom: 2px solid #e5d5be;
+      border-top: 1px solid #f0e4d6;
+      border-bottom: 1px solid #f0e4d6;
     }
 
-    /* 4 nút chức năng đẹp */
+    /* 4 nút chức năng */
     .action-buttons {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 18px;
       flex-wrap: wrap;
-      margin: 45px 0 30px;
+      margin: 40px 0 30px;
     }
 
     .btn-action {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 14px 32px;
+      gap: 8px;
+      padding: 12px 28px;
       border-radius: 50px;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       text-decoration: none;
       transition: all 0.25s ease;
       background: white;
       border: 1px solid #e5d5be;
       color: #2c5a4a;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
     }
 
     .btn-action:hover {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
       border-color: #b86b2c;
-      box-shadow: 0 8px 20px rgba(184, 107, 44, 0.12);
+      box-shadow: 0 6px 14px rgba(184, 107, 44, 0.12);
       color: #b86b2c;
     }
 
@@ -233,16 +219,15 @@
     .btn-primary-action:hover {
       background: #9e5824;
       color: white;
-      border-color: #9e5824;
     }
 
     .stats-row {
       display: flex;
       justify-content: center;
-      gap: 60px;
+      gap: 50px;
       flex-wrap: wrap;
-      margin-top: 30px;
-      padding-top: 30px;
+      margin-top: 25px;
+      padding-top: 25px;
       border-top: 1px solid #f0e4d6;
     }
 
@@ -251,60 +236,54 @@
     }
 
     .stat-number {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 800;
       color: #b86b2c;
       line-height: 1;
     }
 
     .stat-label {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: #9ab0a4;
-      margin-top: 6px;
+      margin-top: 5px;
     }
 
-    /* ===== SECTIONS BÊN DƯỚI (GIỮ NGUYÊN ĐẸP) ===== */
+    /* ===== SECTIONS ===== */
     .section {
-      padding: 80px 0;
+      padding: 70px 0;
     }
 
     .section:nth-child(even) {
       background: #fffaf2;
     }
 
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-
     .section-header {
       text-align: center;
       max-width: 750px;
-      margin: 0 auto 50px;
+      margin: 0 auto 45px;
     }
 
     .section-tag {
       display: inline-block;
       background: #f5ede0;
-      padding: 6px 24px;
+      padding: 5px 22px;
       border-radius: 40px;
       font-size: 0.7rem;
       letter-spacing: 1.5px;
       color: #b86b2c;
       font-weight: 600;
-      margin-bottom: 18px;
-    }
-
-    .section-header h2 {
-      font-size: 2.4rem;
-      font-weight: 600;
-      color: #2c5a4a;
       margin-bottom: 16px;
     }
 
+    .section-header h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #2c5a4a;
+      margin-bottom: 14px;
+    }
+
     .section-header p {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #8b9a8f;
     }
 
@@ -312,42 +291,42 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 24px;
+      gap: 22px;
     }
 
     .timeline-card {
       background: white;
-      padding: 28px 22px;
-      border-radius: 28px;
+      padding: 24px 20px;
+      border-radius: 24px;
       flex: 1;
-      min-width: 160px;
+      min-width: 150px;
       text-align: center;
       border: 1px solid #f0e4d6;
       transition: 0.25s;
     }
 
     .timeline-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       border-color: #c99a6b;
     }
 
     .year {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 700;
       color: #b86b2c;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .content-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
+      gap: 25px;
     }
 
     .content-card {
       background: white;
-      padding: 28px 20px;
-      border-radius: 28px;
+      padding: 26px 18px;
+      border-radius: 24px;
       border: 1px solid #f0e4d6;
       text-align: center;
       transition: 0.25s;
@@ -359,57 +338,56 @@
     }
 
     .card-icon {
-      font-size: 2.4rem;
-      margin-bottom: 16px;
+      font-size: 2.2rem;
+      margin-bottom: 14px;
     }
 
     .content-card h3 {
       color: #2c5a4a;
-      margin-bottom: 10px;
-      font-size: 1.2rem;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
     }
 
     .special-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
+      gap: 30px;
     }
 
     .special-card {
       background: white;
-      border-radius: 32px;
-      padding: 38px 32px;
+      border-radius: 28px;
+      padding: 32px 28px;
       border: 1px solid #f0e4d6;
       transition: 0.25s;
     }
 
     .special-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       border-color: #c99a6b;
-      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.05);
     }
 
     .special-icon {
-      font-size: 2.5rem;
-      margin-bottom: 18px;
+      font-size: 2.3rem;
+      margin-bottom: 16px;
     }
 
     .special-card h3 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: #2c5a4a;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .btn-special {
       display: inline-block;
-      margin-top: 20px;
-      padding: 10px 28px;
+      margin-top: 18px;
+      padding: 8px 24px;
       background: #f5ede0;
       color: #b86b2c;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       transition: 0.2s;
     }
 
@@ -421,18 +399,18 @@
     .gallery {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
+      gap: 20px;
     }
 
     .gallery-card {
       background: white;
-      border-radius: 24px;
+      border-radius: 20px;
       overflow: hidden;
       border: 1px solid #f0e4d6;
     }
 
     .gallery-img {
-      height: 180px;
+      height: 160px;
       background-size: cover;
       background-position: center;
     }
@@ -443,49 +421,50 @@
     .img4 { background: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80') center/cover; }
 
     .gallery-caption {
-      padding: 16px;
+      padding: 14px;
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #7c8c80;
     }
 
     footer {
       background: #2c5a4a;
       color: #f0e8dc;
-      padding: 50px 0 25px;
+      padding: 45px 0 20px;
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 45px;
+      gap: 40px;
     }
 
     .footer-logo img {
-      width: 70px;
+      width: 65px;
       filter: brightness(0) invert(1);
       opacity: 0.85;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .footer-links h4 {
       color: #e5cfaa;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       font-weight: 600;
+      font-size: 1rem;
     }
 
     .footer-links p {
-      margin-bottom: 8px;
-      font-size: 0.85rem;
+      margin-bottom: 6px;
+      font-size: 0.8rem;
       opacity: 0.85;
     }
 
     .copyright {
       text-align: center;
-      padding-top: 35px;
-      margin-top: 35px;
+      padding-top: 30px;
+      margin-top: 30px;
       border-top: 1px solid rgba(255, 245, 220, 0.2);
-      font-size: 0.75rem;
+      font-size: 0.7rem;
     }
 
     @media (max-width: 1000px) {
@@ -494,42 +473,47 @@
       .gallery { grid-template-columns: repeat(2, 1fr); }
       .footer-grid { grid-template-columns: repeat(2, 1fr); }
       .container { padding: 0 32px; }
-      .logo-overlay { left: 20px; top: 12px; padding: 8px 18px; }
-      .logo-overlay img { height: 40px; }
-      .logo-overlay .logo-text { font-size: 0.8rem; }
-      .logo-overlay .logo-text strong { font-size: 1rem; }
+      .banner-wrapper { padding: 15px 32px 0; }
+      .banner-image { height: 140px; }
+      .logo-overlay { bottom: -20px; left: 20px; padding: 6px 18px; }
+      .logo-overlay img { height: 38px; }
+      .logo-overlay .logo-text { font-size: 0.7rem; }
+      .logo-overlay .logo-text strong { font-size: 0.85rem; }
+      .nav-menu { gap: 32px; }
     }
 
     @media (max-width: 700px) {
       .content-grid { grid-template-columns: 1fr; }
       .gallery { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-      .nav-menu { gap: 28px; }
-      .anniversary-badge { padding: 8px 20px; }
-      .anniversary-badge .year-big { font-size: 1.5rem; }
-      .anniversary-badge .year-small { font-size: 1.3rem; }
+      .nav-menu { gap: 20px; }
+      .nav-menu a { font-size: 0.85rem; }
       .action-buttons { gap: 12px; }
-      .btn-action { padding: 10px 20px; font-size: 0.85rem; }
+      .btn-action { padding: 8px 18px; font-size: 0.8rem; }
+      .banner-image { height: 110px; }
+      .logo-overlay { bottom: -15px; left: 15px; padding: 5px 14px; }
+      .logo-overlay img { height: 30px; }
       .stats-row { gap: 30px; }
     }
   </style>
 </head>
 <body>
-  <!-- Banner trên cùng như trang tin tức -->
-  <div class="top-banner">
-    <div class="banner-container">
-      <img src="anh 1.jpg" alt="Học viện Quốc phòng" class="banner-image">
-      <div class="logo-overlay">
-        <img src="logo_hoc vien trong suot.png" alt="Logo Học viện">
-        <div class="logo-text">
-          <strong>Học viện Quốc phòng</strong>
-          National Defence Academy
+  <div class="top-header">
+    <div class="banner-wrapper">
+      <div class="banner-container">
+        <img src="anh 1.jpg" alt="Học viện Quốc phòng" class="banner-image">
+        <div class="logo-overlay">
+          <img src="logo_hoc vien trong suot.png" alt="Logo Học viện">
+          <div class="logo-text">
+            <strong>Học viện Quốc phòng</strong>
+            National Defence Academy
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Thanh menu -->
+  <!-- Menu ngang nổi bật màu cam -->
   <div class="nav-bar">
     <div class="nav-container">
       <div class="nav-menu">
@@ -543,15 +527,14 @@
     </div>
   </div>
 
-  <!-- Section Kỷ niệm 50 năm - thiết kế đẹp mắt -->
+  <!-- Section Kỷ niệm 50 năm -->
   <div class="anniversary-section">
-    <div class="anniversary-container">
+    <div class="container">
       <div class="anniversary-badge">
-        <span class="year-big">KỶ NIỆM</span>
-        <div class="separator"></div>
-        <span class="year-small">1977</span>
-        <span style="font-size: 1.2rem;">—</span>
-        <span class="year-small">2027</span>
+        <span class="year-label">KỶ NIỆM</span>
+        <span class="year-number">1977</span>
+        <span style="color:#b86b2c;">—</span>
+        <span class="year-number">2027</span>
       </div>
       
       <div class="main-title">
@@ -577,7 +560,7 @@
     </div>
   </div>
 
-  <!-- Các section bên dưới -->
+  <!-- Timeline -->
   <section class="section" id="timeline">
     <div class="container">
       <div class="section-header">
@@ -595,6 +578,7 @@
     </div>
   </section>
 
+  <!-- Hoạt động -->
   <section class="section" id="hoatdong">
     <div class="container">
       <div class="section-header">
@@ -611,6 +595,7 @@
     </div>
   </section>
 
+  <!-- Bài viết cảm nhận -->
   <section class="section" id="bai-viet">
     <div class="container">
       <div class="section-header">
@@ -620,11 +605,12 @@
       </div>
       <div class="special-grid">
         <div class="special-card"><div class="special-icon">✍️</div><h3>Ký ức người lính</h3><p>"50 năm - Một chặng đường dài với biết bao kỷ niệm. Tôi tự hào được là một phần của Học viện Quốc phòng, nơi đã rèn luyện và trưởng thành biết bao thế hệ cán bộ..."</p><a href="#" class="btn-special">Đọc tiếp →</a></div>
-        <div class="special-card"><div class="special-icon">💬</div><h3>Phụ nữ với truyền thống</h3><p>"Phát huy phẩm chất 'Anh hùng - Bất khuất - Trung hậu - Đảm đang', phụ nữ Học viện luôn là những bông hoa thép trong lòng quân đội, góp phần viết tiếp truyền thống vẻ vang..."</p><a href="#" class="btn-special">Đọc tiếp →</a></div>
+        <div class="special-card"><div class="special-icon">💬</div><h3>Phụ nữ với truyền thống</h3><p>"Phát huy phẩm chất 'Anh hùng - Bất khuất - Trung hậu - Đảm đang', phụ nữ Học viện luôn là những bông hoa thép, góp phần viết tiếp trang sử vẻ vang..."</p><a href="#" class="btn-special">Đọc tiếp →</a></div>
       </div>
     </div>
   </section>
 
+  <!-- Trò chơi trí tuệ -->
   <section class="section" id="tro-choi">
     <div class="container">
       <div class="section-header">
@@ -639,6 +625,7 @@
     </div>
   </section>
 
+  <!-- Thư viện ảnh -->
   <section class="section" id="gallery">
     <div class="container">
       <div class="section-header">
