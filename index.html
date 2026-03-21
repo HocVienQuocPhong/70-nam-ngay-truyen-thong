@@ -842,231 +842,382 @@
       }
     }
  /* ===== GIÁ TRỊ CỐT LÕI – PHIÊN BẢN TINH TẾ ===== */
-.core-section{
-  padding: 36px 0 18px;
-}
-
-.core-shell{
+.premium-core-section{
+  padding: 42px 0 24px;
   position: relative;
-  padding: 42px 34px 30px;
-  border-radius: 30px;
-  background:
-    radial-gradient(circle at top right, rgba(212,175,55,0.10), transparent 22%),
-    linear-gradient(180deg, #f8faf8 0%, #f1f5f2 100%);
-  border: 1px solid rgba(19, 58, 47, 0.08);
-  box-shadow:
-    0 18px 40px rgba(13, 41, 34, 0.08),
-    inset 0 1px 0 rgba(255,255,255,0.75);
-  overflow: hidden;
 }
 
-.core-shell::before{
-  content: "";
+.premium-core-wrap{
+  position: relative;
+  overflow: hidden;
+  padding: 48px 34px 34px;
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.96), rgba(248,250,247,0.98)),
+    linear-gradient(145deg, #f5f8f5 0%, #eef3ef 100%);
+  border: 1px solid rgba(18, 56, 47, 0.09);
+  box-shadow:
+    0 28px 70px rgba(10, 35, 28, 0.10),
+    0 8px 20px rgba(10, 35, 28, 0.04),
+    inset 0 1px 0 rgba(255,255,255,0.95);
+}
+
+.premium-core-bg-pattern{
   position: absolute;
-  top: -120px;
-  right: -90px;
-  width: 260px;
-  height: 260px;
+  inset: auto -120px -120px auto;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,175,55,0.12), transparent 68%);
+  background:
+    radial-gradient(circle,
+      rgba(190,150,40,0.08) 0%,
+      rgba(190,150,40,0.05) 24%,
+      rgba(190,150,40,0.02) 42%,
+      transparent 70%);
   pointer-events: none;
 }
 
-.core-header{
-  text-align: center;
-  max-width: 860px;
-  margin: 0 auto 34px;
-  position: relative;
-  z-index: 2;
+.premium-core-bg-pattern::before{
+  content: "";
+  position: absolute;
+  inset: 14% 14%;
+  border-radius: 50%;
+  border: 1px dashed rgba(190,150,40,0.16);
 }
 
-.core-kicker{
+.premium-core-bg-pattern::after{
+  content: "";
+  position: absolute;
+  inset: 28% 28%;
+  border-radius: 50%;
+  border: 1px dashed rgba(190,150,40,0.12);
+}
+
+.premium-core-glow{
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.premium-core-glow-1{
+  top: -70px;
+  right: 80px;
+  width: 220px;
+  height: 220px;
+  background: rgba(212,175,55,0.10);
+}
+
+.premium-core-glow-2{
+  left: -80px;
+  bottom: 40px;
+  width: 180px;
+  height: 180px;
+  background: rgba(25,84,69,0.06);
+}
+
+.premium-core-header{
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.premium-core-kicker{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 9px 18px;
+  padding: 10px 18px;
   border-radius: 999px;
-  background: rgba(212,175,55,0.10);
-  border: 1px solid rgba(212,175,55,0.38);
-  color: #c59a2d;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: .16em;
-  margin-bottom: 16px;
+  letter-spacing: .18em;
+  color: #bc9126;
+  background: linear-gradient(180deg, #fff7df 0%, #f6ecd0 100%);
+  border: 1px solid rgba(200,160,52,0.35);
+  box-shadow:
+    0 8px 20px rgba(190,150,40,0.10),
+    inset 0 1px 0 rgba(255,255,255,0.85);
 }
 
-.core-header h2{
-  margin: 0;
-  font-size: clamp(32px, 4vw, 50px);
-  line-height: 1.14;
+.premium-core-title{
+  margin: 18px 0 0;
+  font-size: clamp(34px, 4.4vw, 58px);
+  line-height: 1.08;
   font-weight: 800;
-  color: #12382f;
-  letter-spacing: -0.03em;
-}
-
-.core-header h2 span{
-  color: #d0a63a;
-}
-
-.core-header p{
-  margin: 16px auto 0;
-  max-width: 760px;
-  font-size: 17px;
-  line-height: 1.8;
-  color: #587068;
-}
-
-.core-grid{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-  position: relative;
-  z-index: 2;
-}
-
-.core-item{
-  position: relative;
-  padding: 24px 22px 22px;
-  border-radius: 24px;
-  background: #ffffff;
-  border: 1px solid #e6ece8;
-  box-shadow: 0 16px 34px rgba(10, 39, 31, 0.08);
-  transition: all .32s ease;
-  overflow: hidden;
-}
-
-.core-item::before{
-  content: "";
-  position: absolute;
-  inset: 0 auto auto 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(90deg, #1d5648, #d4af37);
-  opacity: 0;
-  transition: opacity .3s ease;
-}
-
-.core-item:hover{
-  transform: translateY(-8px);
-  box-shadow: 0 22px 40px rgba(10, 39, 31, 0.13);
-  border-color: rgba(212,175,55,0.45);
-}
-
-.core-item:hover::before,
-.core-item.active::before{
-  opacity: 1;
-}
-
-.core-item.active{
-  border-color: rgba(212,175,55,0.55);
-  box-shadow: 0 22px 42px rgba(10, 39, 31, 0.14);
-}
-
-.core-item-icon{
-  width: 58px;
-  height: 58px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(180deg, #fff7e2 0%, #f2e6c7 100%);
-  border: 1px solid #e8d29a;
-  box-shadow: 0 10px 18px rgba(197,154,45,0.16);
-  font-size: 26px;
-  margin-bottom: 18px;
-}
-
-.core-item-no{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 14px;
-  font-weight: 800;
-  color: #bfd0c9;
-  letter-spacing: .14em;
-}
-
-.core-item h3{
-  margin: 0 0 12px;
-  font-size: 24px;
-  font-weight: 800;
+  letter-spacing: -0.04em;
   color: #173d34;
 }
 
-.core-item p{
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.8;
-  color: #5e736d;
+.premium-core-title span{
+  display: inline-block;
+  color: #d0a438;
+  text-shadow: 0 2px 14px rgba(208,164,56,0.10);
 }
 
-.core-metrics{
+.premium-core-desc{
+  max-width: 760px;
+  margin: 18px auto 0;
+  font-size: 17px;
+  line-height: 1.85;
+  color: #5b7269;
+}
+
+.premium-core-divider{
   margin-top: 22px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.premium-core-divider span{
+  position: relative;
+  width: 140px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.premium-core-divider span::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 3px;
+  background: linear-gradient(135deg, #f0d58a, #c99e2d);
+  box-shadow: 0 0 0 6px rgba(212,175,55,0.08);
+}
+
+.premium-core-grid{
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
 }
 
-.metric-box{
-  border-radius: 22px;
-  padding: 22px 18px;
+.premium-core-card{
+  position: relative;
+  min-height: 285px;
+  padding: 24px 22px 22px;
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.98), rgba(252,253,251,0.96));
+  border: 1px solid rgba(22, 61, 52, 0.09);
+  box-shadow:
+    0 18px 35px rgba(13, 41, 34, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.95);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  overflow: hidden;
+}
+
+.premium-core-card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(212,175,55,0.06), transparent 32%);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.premium-core-card:hover{
+  transform: translateY(-10px);
+  box-shadow:
+    0 24px 48px rgba(13, 41, 34, 0.13),
+    0 6px 14px rgba(13, 41, 34, 0.04);
+  border-color: rgba(212,175,55,0.34);
+}
+
+.premium-core-card:hover::before,
+.premium-core-card.featured::before{
+  opacity: 1;
+}
+
+.premium-core-card.featured{
+  border-color: rgba(212,175,55,0.48);
+  box-shadow:
+    0 24px 50px rgba(13, 41, 34, 0.14),
+    0 0 0 1px rgba(212,175,55,0.08) inset;
+}
+
+.card-1,
+.card-3{
+  margin-top: 0;
+}
+
+.card-2,
+.card-4{
+  margin-top: 26px;
+}
+
+.premium-card-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.premium-card-icon{
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  background: linear-gradient(180deg, #fff8e7 0%, #f4e7c4 100%);
+  border: 1px solid rgba(212,175,55,0.36);
+  box-shadow:
+    0 10px 22px rgba(200,160,52,0.16),
+    inset 0 1px 0 rgba(255,255,255,0.88);
+}
+
+.premium-card-no{
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #b7c8c1;
+}
+
+.premium-core-card h3{
+  margin: 0 0 12px;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #183e35;
+  letter-spacing: -0.02em;
+}
+
+.premium-core-card p{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #5c726a;
+}
+
+.premium-card-line{
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  height: 5px;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(90deg, #1e584a, #d4af37);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
+}
+
+.premium-core-card:hover .premium-card-line,
+.premium-core-card.featured .premium-card-line{
+  transform: scaleX(1);
+}
+
+.premium-core-stats{
+  position: relative;
+  z-index: 2;
+  margin-top: 28px;
+  padding: 16px 22px;
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  background:
+    linear-gradient(135deg, rgba(255,248,228,0.90), rgba(250,246,235,0.88));
+  border: 1px solid rgba(212,175,55,0.28);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.92),
+    0 12px 28px rgba(190,150,40,0.07);
+}
+
+.premium-stat-item{
   text-align: center;
-  background: linear-gradient(180deg, #fffdf7 0%, #f7f1df 100%);
-  border: 1px solid rgba(212,175,55,0.30);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.85);
+  padding: 10px 8px;
 }
 
-.metric-box span{
+.premium-stat-item .stat-label{
   display: block;
   margin-bottom: 8px;
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: .14em;
-  color: #9c8a57;
+  letter-spacing: .16em;
+  color: #9f8b56;
 }
 
-.metric-box strong{
-  font-size: clamp(28px, 3vw, 40px);
+.premium-stat-item strong{
+  display: block;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.05;
   font-weight: 800;
   color: #173d34;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
-@media (max-width: 1100px){
-  .core-grid{
+.premium-stat-item small{
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #6f786d;
+}
+
+.premium-stat-sep{
+  width: 1px;
+  height: 54px;
+  background: linear-gradient(to bottom, transparent, rgba(180,150,70,0.36), transparent);
+}
+
+@media (max-width: 1180px){
+  .premium-core-grid{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card-2,
+  .card-4{
+    margin-top: 0;
   }
 }
 
 @media (max-width: 768px){
-  .core-shell{
-    padding: 28px 18px 20px;
-    border-radius: 22px;
+  .premium-core-wrap{
+    padding: 30px 18px 22px;
+    border-radius: 24px;
   }
 
-  .core-header h2{
-    font-size: 28px;
+  .premium-core-title{
+    font-size: 30px;
+    line-height: 1.14;
   }
 
-  .core-header p{
+  .premium-core-desc{
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
-  .core-grid{
+  .premium-core-grid{
     grid-template-columns: 1fr;
     gap: 14px;
   }
 
-  .core-metrics{
-    grid-template-columns: 1fr;
+  .premium-core-card{
+    min-height: auto;
   }
 
-  .core-item h3{
-    font-size: 22px;
+  .premium-core-stats{
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .premium-stat-sep{
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(180,150,70,0.32), transparent);
   }
 }
   </style>
@@ -1106,78 +1257,114 @@
 
   <main>
     <!-- GIÁ TRỊ CỐT LÕI -->
-<section class="section show core-section" id="giatri">
+<section class="section show premium-core-section" id="giatri">
   <div class="container">
-    <div class="core-shell">
-      <div class="core-header">
-        <span class="core-kicker">GIÁ TRỊ CỐT LÕI</span>
-        <h2>Bản sắc hun đúc từ <span>50 năm truyền thống</span></h2>
-        <p>
-          Truyền thống làm nên uy tín, bản lĩnh và sức mạnh phát triển bền vững
-          của Học viện Quốc phòng trong suốt chặng đường xây dựng và trưởng thành.
+    <div class="premium-core-wrap">
+
+      <div class="premium-core-bg-pattern"></div>
+      <div class="premium-core-glow premium-core-glow-1"></div>
+      <div class="premium-core-glow premium-core-glow-2"></div>
+
+      <div class="premium-core-header">
+        <span class="premium-core-kicker">GIÁ TRỊ CỐT LÕI</span>
+
+        <h2 class="premium-core-title">
+          Bản sắc hun đúc từ
+          <span>50 năm truyền thống</span>
+        </h2>
+
+        <p class="premium-core-desc">
+          Truyền thống tạo nên uy tín, bản lĩnh và chiều sâu phát triển của Học viện Quốc phòng;
+          là nền tảng để tiếp nối những giá trị bền vững trong đào tạo, nghiên cứu và phụng sự
+          sự nghiệp bảo vệ Tổ quốc.
         </p>
+
+        <div class="premium-core-divider">
+          <span></span>
+        </div>
       </div>
 
-      <div class="core-grid">
-        <article class="core-item">
-          <div class="core-item-icon">⚜️</div>
-          <div class="core-item-no">01</div>
+      <div class="premium-core-grid">
+        <article class="premium-core-card card-1">
+          <div class="premium-card-top">
+            <div class="premium-card-icon">⚜️</div>
+            <span class="premium-card-no">01</span>
+          </div>
           <h3>Trung thành</h3>
           <p>
-            Tuyệt đối trung thành với Đảng, với Tổ quốc, với mục tiêu lý tưởng
-            cách mạng và sự nghiệp bảo vệ vững chắc Tổ quốc Việt Nam xã hội chủ nghĩa.
+            Tuyệt đối trung thành với Đảng, với Tổ quốc, với mục tiêu lý tưởng cách mạng
+            và sự nghiệp bảo vệ vững chắc Tổ quốc Việt Nam xã hội chủ nghĩa.
           </p>
+          <div class="premium-card-line"></div>
         </article>
 
-        <article class="core-item">
-          <div class="core-item-icon">🤝</div>
-          <div class="core-item-no">02</div>
+        <article class="premium-core-card card-2">
+          <div class="premium-card-top">
+            <div class="premium-card-icon">🤝</div>
+            <span class="premium-card-no">02</span>
+          </div>
           <h3>Tận tụy</h3>
           <p>
             Hết lòng vì sự nghiệp đào tạo, nghiên cứu khoa học nghệ thuật quân sự,
             xây dựng đội ngũ cán bộ cao cấp cho Nhà nước và Quân đội.
           </p>
+          <div class="premium-card-line"></div>
         </article>
 
-        <article class="core-item active">
-          <div class="core-item-icon">🔗</div>
-          <div class="core-item-no">03</div>
+        <article class="premium-core-card card-3 featured">
+          <div class="premium-card-top">
+            <div class="premium-card-icon">🔗</div>
+            <span class="premium-card-no">03</span>
+          </div>
           <h3>Đoàn kết</h3>
           <p>
             Gắn bó, đồng lòng, phát huy sức mạnh tập thể, tạo nên nền tảng vững chắc
             trong xây dựng và phát triển Học viện qua các thời kỳ.
           </p>
+          <div class="premium-card-line"></div>
         </article>
 
-        <article class="core-item">
-          <div class="core-item-icon">💡</div>
-          <div class="core-item-no">04</div>
+        <article class="premium-core-card card-4">
+          <div class="premium-card-top">
+            <div class="premium-card-icon">✦</div>
+            <span class="premium-card-no">04</span>
+          </div>
           <h3>Sáng tạo</h3>
           <p>
             Không ngừng đổi mới tư duy, nội dung, phương pháp đào tạo và nghiên cứu,
             đáp ứng yêu cầu nhiệm vụ quốc phòng trong thời kỳ mới.
           </p>
+          <div class="premium-card-line"></div>
         </article>
       </div>
 
-      <div class="core-metrics">
-        <div class="metric-box">
-          <span>Khởi đầu</span>
+      <div class="premium-core-stats">
+        <div class="premium-stat-item">
+          <span class="stat-label">Khởi đầu</span>
           <strong>1977</strong>
+          <small>Đặt nền móng truyền thống</small>
         </div>
-        <div class="metric-box">
-          <span>Hành trình</span>
+
+        <div class="premium-stat-sep"></div>
+
+        <div class="premium-stat-item">
+          <span class="stat-label">Hành trình</span>
           <strong>50 năm</strong>
+          <small>Xây dựng và trưởng thành</small>
         </div>
-        <div class="metric-box">
-          <span>Kỷ niệm</span>
+
+        <div class="premium-stat-sep"></div>
+
+        <div class="premium-stat-item">
+          <span class="stat-label">Kỷ niệm</span>
           <strong>2027</strong>
+          <small>Dấu mốc tự hào</small>
         </div>
       </div>
+
     </div>
   </div>
 </section>
-
     <!-- LỊCH SỬ -->
     <section class="section" id="lichsu">
       <div class="container">
