@@ -34,6 +34,7 @@
 
       --shadow-main:0 20px 46px rgba(18,32,28,0.08);
       --shadow-card:0 12px 28px rgba(18,32,28,0.06);
+      --shadow-frame:0 18px 32px rgba(18,32,28,0.10);
 
       --radius-xxl:34px;
       --radius-xl:26px;
@@ -51,7 +52,7 @@
         radial-gradient(circle at top right, rgba(18,47,42,0.05), transparent 20%),
         var(--bg);
       color:var(--text);
-      line-height:1.65;
+      line-height:1.7;
     }
 
     img{
@@ -69,7 +70,7 @@
       margin:0 auto;
     }
 
-    /* ===== PREMIUM MUSEUM BANNER ===== */
+    /* ===== BANNER ===== */
     .hero-wrap{
       background:linear-gradient(180deg, #102f2a 0%, #153932 100%);
       padding:0 0 14px;
@@ -93,7 +94,7 @@
       height:100%;
       object-fit:cover;
       object-position:center;
-      filter:brightness(0.96) contrast(1.04) saturate(1.02);
+      filter:brightness(1.04) contrast(1.05) saturate(1.03);
       transform:scale(1.01);
     }
 
@@ -101,8 +102,8 @@
       position:absolute;
       inset:0;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 22%, rgba(0,0,0,0.10) 100%),
-        linear-gradient(90deg, rgba(10,28,24,0.30) 0%, rgba(10,28,24,0.12) 48%, rgba(10,28,24,0.24) 100%);
+        linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.03) 24%, rgba(0,0,0,0.08) 100%),
+        linear-gradient(90deg, rgba(10,28,24,0.18) 0%, rgba(10,28,24,0.08) 48%, rgba(10,28,24,0.18) 100%);
     }
 
     .hero-brand{
@@ -117,17 +118,17 @@
     .brand-card{
       display:flex;
       align-items:center;
-      gap:18px;
+      gap:16px;
       background:rgba(255,253,248,0.92);
       border:1px solid rgba(255,255,255,0.70);
       backdrop-filter:blur(10px);
-      padding:14px 24px 14px 16px;
+      padding:13px 22px 13px 14px;
       border-radius:999px;
       box-shadow:0 12px 24px rgba(0,0,0,0.12);
     }
 
     .brand-card img{
-      height:68px;
+      height:56px; /* nhỏ hơn */
       width:auto;
       object-fit:contain;
       filter:drop-shadow(0 4px 10px rgba(184,137,69,0.18));
@@ -139,7 +140,7 @@
 
     .brand-text .vi{
       display:block;
-      font-size:1.18rem;
+      font-size:1.14rem;
       font-weight:900;
       color:var(--deep);
       letter-spacing:0.4px;
@@ -149,7 +150,7 @@
     .brand-text .en{
       display:block;
       margin-top:6px;
-      font-size:0.84rem;
+      font-size:0.82rem;
       font-weight:700;
       color:#8d6630;
       letter-spacing:1.3px;
@@ -203,9 +204,9 @@
       color:#8b6328;
     }
 
-    /* ===== SHARED ===== */
+    /* ===== SECTION SHARED ===== */
     .section{
-      padding:84px 0;
+      padding:100px 0;
       opacity:0;
       transform:translateY(24px);
       transition:opacity .65s ease, transform .65s ease;
@@ -220,7 +221,7 @@
       border-radius:var(--radius-xxl);
       border:1px solid var(--line);
       box-shadow:var(--shadow-main);
-      padding:42px 34px;
+      padding:54px 42px;
       overflow:hidden;
       position:relative;
     }
@@ -235,40 +236,48 @@
 
     .section-title{
       text-align:center;
-      margin-bottom:46px;
+      margin-bottom:56px;
     }
 
     .section-title .kicker{
       display:inline-block;
-      padding:7px 16px;
+      padding:8px 18px;
       border-radius:999px;
       background:rgba(184,137,69,0.12);
       color:#8b6328;
       border:1px solid rgba(184,137,69,0.12);
       font-size:0.76rem;
       font-weight:900;
-      letter-spacing:1.7px;
+      letter-spacing:2px;
       text-transform:uppercase;
-      margin-bottom:14px;
+      margin-bottom:18px;
     }
 
     .section-title h2{
-      font-size:clamp(2rem, 4vw, 3.15rem);
-      line-height:1.14;
+      font-size:clamp(2rem, 4vw, 3.2rem);
+      line-height:1.12;
       font-weight:900;
-      letter-spacing:-0.03em;
+      letter-spacing:-0.035em;
       color:var(--deep);
     }
 
     .section-title p{
-      margin:12px auto 0;
-      max-width:790px;
+      margin:14px auto 0;
+      max-width:820px;
       color:var(--muted);
-      font-size:1rem;
+      font-size:1.02rem;
+    }
+
+    .curator-line{
+      width:92px;
+      height:2px;
+      background:linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin:18px auto 0;
+      opacity:0.9;
     }
 
     .card{
-      background:rgba(255,255,255,0.82);
+      background:rgba(255,255,255,0.84);
       border:1px solid rgba(18,47,42,0.05);
       border-radius:24px;
       box-shadow:var(--shadow-card);
@@ -284,18 +293,18 @@
     .core-grid{
       display:grid;
       grid-template-columns:repeat(4, 1fr);
-      gap:20px;
+      gap:22px;
     }
 
     .core-card{
-      padding:28px 22px;
+      padding:30px 24px;
       text-align:center;
     }
 
     .core-icon{
-      width:70px;
-      height:70px;
-      margin:0 auto 16px;
+      width:72px;
+      height:72px;
+      margin:0 auto 18px;
       border-radius:22px;
       display:flex;
       align-items:center;
@@ -306,7 +315,7 @@
     }
 
     .core-card h4{
-      font-size:1.22rem;
+      font-size:1.24rem;
       color:var(--deep-2);
       font-weight:900;
       margin-bottom:8px;
@@ -314,28 +323,28 @@
 
     .core-card p{
       color:var(--muted);
-      font-size:0.97rem;
+      font-size:0.98rem;
     }
 
     .stats-row{
       display:grid;
       grid-template-columns:repeat(4, 1fr);
       gap:18px;
-      margin-top:28px;
+      margin-top:34px;
     }
 
     .stat-box{
       background:rgba(255,255,255,0.9);
       border:1px solid rgba(18,47,42,0.05);
       border-radius:22px;
-      padding:22px 18px;
+      padding:24px 18px;
       text-align:center;
       box-shadow:var(--shadow-card);
     }
 
     .stat-box strong{
       display:block;
-      font-size:2.4rem;
+      font-size:2.5rem;
       line-height:1;
       font-weight:900;
       color:#a87933;
@@ -344,34 +353,53 @@
 
     .stat-box span{
       display:block;
-      margin-top:7px;
+      margin-top:8px;
       color:var(--deep);
       font-weight:700;
       font-size:0.95rem;
     }
 
-    /* ===== TIMELINE ===== */
+    /* ===== TIMELINE EXHIBITION STYLE ===== */
+    .timeline-wrap{
+      position:relative;
+      padding:26px 0 10px;
+    }
+
+    .timeline-line{
+      position:absolute;
+      left:0;
+      right:0;
+      top:54px;
+      height:2px;
+      background:linear-gradient(90deg, rgba(184,137,69,0.16), rgba(184,137,69,0.65), rgba(184,137,69,0.16));
+      z-index:0;
+    }
+
     .timeline{
+      position:relative;
+      z-index:1;
       display:grid;
       grid-template-columns:repeat(5, 1fr);
       gap:18px;
+      align-items:start;
     }
 
     .timeline-card{
-      padding:26px 18px;
+      padding:0 8px;
       text-align:center;
       position:relative;
+      background:transparent;
+      box-shadow:none;
+      border:none;
     }
 
-    .timeline-card::before{
-      content:"";
-      position:absolute;
-      left:18px;
-      right:18px;
-      top:0;
-      height:4px;
-      border-radius:999px;
-      background:linear-gradient(90deg, #cf9f57 0%, #a87933 100%);
+    .timeline-dot{
+      width:18px;
+      height:18px;
+      border-radius:50%;
+      background:linear-gradient(135deg, #c89a54, #a87933);
+      margin:0 auto 18px;
+      box-shadow:0 0 0 6px rgba(184,137,69,0.12);
     }
 
     .year{
@@ -379,29 +407,44 @@
       line-height:1;
       color:#a87933;
       font-weight:900;
-      margin-bottom:12px;
+      margin-bottom:14px;
       letter-spacing:-0.03em;
     }
 
-    .timeline-card p{
+    .timeline-panel{
+      background:rgba(255,255,255,0.86);
+      border:1px solid rgba(18,47,42,0.05);
+      border-radius:22px;
+      padding:22px 16px;
+      box-shadow:var(--shadow-card);
+      min-height:200px;
+      transition:all .22s ease;
+    }
+
+    .timeline-card:hover .timeline-panel{
+      transform:translateY(-5px);
+      box-shadow:0 18px 34px rgba(18,32,28,0.08);
+    }
+
+    .timeline-panel p{
       color:var(--muted);
-      font-size:0.96rem;
+      font-size:0.97rem;
     }
 
     /* ===== FEATURES ===== */
     .feature-grid{
       display:grid;
-      grid-template-columns:repeat(4, 1fr);
-      gap:20px;
+      grid-template-columns:repeat(2, 1fr);
+      gap:22px;
     }
 
     .feature-card{
-      padding:28px 22px;
+      padding:30px 26px;
     }
 
     .feature-icon{
-      width:64px;
-      height:64px;
+      width:66px;
+      height:66px;
       border-radius:20px;
       display:flex;
       align-items:center;
@@ -414,7 +457,7 @@
 
     .feature-card h3{
       color:var(--deep);
-      font-size:1.14rem;
+      font-size:1.16rem;
       line-height:1.32;
       font-weight:900;
       margin-bottom:10px;
@@ -422,7 +465,7 @@
 
     .feature-card p{
       color:var(--muted);
-      font-size:0.97rem;
+      font-size:0.99rem;
     }
 
     /* ===== LEADERS ===== */
@@ -433,19 +476,19 @@
     }
 
     .leader-item{
-      padding:26px 18px;
+      padding:28px 18px;
       text-align:center;
     }
 
     .avatar-symbol{
-      width:88px;
-      height:88px;
-      margin:0 auto 14px;
+      width:90px;
+      height:90px;
+      margin:0 auto 15px;
       border-radius:50%;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size:2.3rem;
+      font-size:2.35rem;
       background:linear-gradient(180deg, #fff5e5 0%, #fbefdb 100%);
       box-shadow:inset 0 0 0 1px rgba(184,137,69,0.12);
     }
@@ -472,7 +515,7 @@
     }
 
     .testimonial{
-      padding:32px 28px;
+      padding:34px 30px;
       border-left:6px solid #b88945;
     }
 
@@ -483,34 +526,34 @@
 
     .testimonial h3{
       color:var(--deep);
-      font-size:1.22rem;
+      font-size:1.24rem;
       font-weight:900;
       margin-bottom:10px;
     }
 
     .testimonial p{
       color:var(--muted);
-      font-size:0.98rem;
+      font-size:0.99rem;
     }
 
     /* ===== GAMES ===== */
     .game-row{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
-      gap:20px;
+      gap:22px;
     }
 
     .game-card{
-      padding:30px 24px;
+      padding:32px 24px;
       text-align:center;
     }
 
     .game-card .emoji{
-      font-size:2.8rem;
+      font-size:2.9rem;
     }
 
     .game-card h3{
-      margin:15px 0 8px;
+      margin:16px 0 8px;
       color:var(--deep);
       font-size:1.18rem;
       font-weight:900;
@@ -518,7 +561,7 @@
 
     .game-card p{
       color:var(--muted);
-      font-size:0.97rem;
+      font-size:0.98rem;
     }
 
     /* ===== BUTTON ===== */
@@ -541,33 +584,50 @@
       transform:translateY(-2px);
     }
 
-    /* ===== GALLERY ===== */
+    /* ===== GALLERY EXHIBITION FRAME ===== */
     .gallery-grid{
       display:grid;
       grid-template-columns:repeat(4, 1fr);
-      gap:18px;
+      gap:24px;
+    }
+
+    .gallery-frame{
+      background:linear-gradient(180deg, #dcc7a4 0%, #b48a4c 100%);
+      padding:10px;
+      border-radius:10px;
+      box-shadow:var(--shadow-frame);
     }
 
     .gallery-item{
       overflow:hidden;
+      background:#f6f0e3;
+      border:1px solid rgba(97,70,28,0.18);
+      box-shadow:inset 0 0 0 2px rgba(255,255,255,0.28);
+    }
+
+    .gallery-inner{
+      background:#fff;
+      padding:10px;
     }
 
     .gallery-img{
-      height:220px;
+      height:240px;
       background-size:cover;
       background-position:center;
       transition:transform .35s ease;
+      border:1px solid rgba(18,47,42,0.06);
     }
 
-    .gallery-item:hover .gallery-img{
+    .gallery-frame:hover .gallery-img{
       transform:scale(1.04);
     }
 
     .gallery-caption{
-      padding:16px;
+      padding:14px 8px 6px;
       color:var(--deep);
       font-weight:800;
       font-size:0.96rem;
+      text-align:center;
       background:rgba(255,255,255,0.92);
     }
 
@@ -631,6 +691,10 @@
         grid-template-columns:repeat(3, 1fr);
       }
 
+      .timeline-line{
+        display:none;
+      }
+
       .leader-wrap{
         grid-template-columns:repeat(3, 1fr);
       }
@@ -660,7 +724,7 @@
       }
 
       .brand-card img{
-        height:52px;
+        height:48px;
       }
 
       .brand-text .vi{
@@ -672,28 +736,27 @@
       }
 
       .section{
-        padding:58px 0;
+        padding:62px 0;
       }
 
       .section-card{
-        padding:28px 18px;
+        padding:30px 18px;
         border-radius:24px;
       }
 
-      .timeline{
-        grid-template-columns:repeat(2, 1fr);
-      }
-
-      .leader-wrap{
-        grid-template-columns:repeat(2, 1fr);
-      }
-
-      .testimonial-duo{
-        grid-template-columns:1fr;
-      }
-
+      .timeline,
+      .leader-wrap,
+      .testimonial-duo,
       .game-row{
         grid-template-columns:1fr;
+      }
+
+      .timeline-card{
+        padding:0;
+      }
+
+      .timeline-panel{
+        min-height:auto;
       }
     }
 
@@ -719,15 +782,15 @@
       }
 
       .brand-card img{
-        height:44px;
+        height:40px;
       }
 
       .brand-text .vi{
-        font-size:0.82rem;
+        font-size:0.8rem;
       }
 
       .brand-text .en{
-        font-size:0.64rem;
+        font-size:0.62rem;
         letter-spacing:0.9px;
       }
 
@@ -746,20 +809,22 @@
 
       .core-grid,
       .stats-row,
-      .timeline,
       .feature-grid,
-      .leader-wrap,
       .gallery-grid,
       .footer-inner{
         grid-template-columns:1fr;
       }
 
       .section-title{
-        margin-bottom:34px;
+        margin-bottom:36px;
       }
 
       .section-title h2{
-        font-size:1.72rem;
+        font-size:1.76rem;
+      }
+
+      .gallery-img{
+        height:220px;
       }
     }
   </style>
@@ -805,9 +870,10 @@
       <div class="container">
         <div class="section-card theme-1">
           <div class="section-title">
-            <div class="kicker">TINH HOA BẢN SẮC</div>
-            <h2>GIÁ TRỊ CỐT LÕI</h2>
+            <div class="kicker">CHUYÊN ĐỀ 01 • TINH HOA BẢN SẮC</div>
+            <h2>Giá trị cốt lõi</h2>
             <p>Những phẩm chất làm nên bản sắc, uy tín và sức mạnh phát triển bền vững của Học viện Quốc phòng trong suốt chặng đường 50 năm xây dựng và trưởng thành.</p>
+            <div class="curator-line"></div>
           </div>
 
           <div class="core-grid">
@@ -848,31 +914,54 @@
       <div class="container">
         <div class="section-card theme-2">
           <div class="section-title">
-            <div class="kicker">CHẶNG ĐƯỜNG VINH QUANG</div>
+            <div class="kicker">CHUYÊN ĐỀ 02 • BIÊN NIÊN HÀNH TRÌNH</div>
             <h2>50 năm – Những cột mốc vàng</h2>
             <p>Hành trình xây dựng, trưởng thành và phát triển của Học viện Quốc phòng qua các thời kỳ, gắn liền với những bước tiến quan trọng của nền quốc phòng toàn dân.</p>
+            <div class="curator-line"></div>
           </div>
 
-          <div class="timeline">
-            <div class="card timeline-card">
-              <div class="year">1977</div>
-              <p>Thành lập Học viện Quốc phòng, đặt nền móng cho trung tâm đào tạo, bồi dưỡng cán bộ cấp cao của Quân đội trong thời kỳ mới.</p>
-            </div>
-            <div class="card timeline-card">
-              <div class="year">1987</div>
-              <p>Đào tạo cán bộ chiến lược, từng bước khẳng định vị thế là cơ sở đào tạo, nghiên cứu quân sự quan trọng của Quân đội nhân dân Việt Nam.</p>
-            </div>
-            <div class="card timeline-card">
-              <div class="year">1997</div>
-              <p>Mở rộng hợp tác quốc tế, tăng cường trao đổi học thuật, học hỏi kinh nghiệm với các học viện quân sự của nhiều quốc gia.</p>
-            </div>
-            <div class="card timeline-card">
-              <div class="year">2012</div>
-              <p>Hiện đại hóa toàn diện, đổi mới chương trình, nội dung, phương pháp đào tạo và nâng cao chất lượng nghiên cứu khoa học quân sự.</p>
-            </div>
-            <div class="card timeline-card">
-              <div class="year">2027</div>
-              <p>Kỷ niệm 50 năm ngày truyền thống, tiếp tục khẳng định niềm tự hào, trách nhiệm và khát vọng phát triển trong giai đoạn mới.</p>
+          <div class="timeline-wrap">
+            <div class="timeline-line"></div>
+            <div class="timeline">
+              <div class="timeline-card">
+                <div class="timeline-dot"></div>
+                <div class="year">1977</div>
+                <div class="timeline-panel">
+                  <p>Thành lập Học viện Quốc phòng, đặt nền móng cho trung tâm đào tạo, bồi dưỡng cán bộ cấp cao của Quân đội trong thời kỳ mới.</p>
+                </div>
+              </div>
+
+              <div class="timeline-card">
+                <div class="timeline-dot"></div>
+                <div class="year">1987</div>
+                <div class="timeline-panel">
+                  <p>Đào tạo cán bộ chiến lược, từng bước khẳng định vị thế là cơ sở đào tạo, nghiên cứu quân sự quan trọng của Quân đội nhân dân Việt Nam.</p>
+                </div>
+              </div>
+
+              <div class="timeline-card">
+                <div class="timeline-dot"></div>
+                <div class="year">1997</div>
+                <div class="timeline-panel">
+                  <p>Mở rộng hợp tác quốc tế, tăng cường trao đổi học thuật, học hỏi kinh nghiệm với các học viện quân sự của nhiều quốc gia.</p>
+                </div>
+              </div>
+
+              <div class="timeline-card">
+                <div class="timeline-dot"></div>
+                <div class="year">2012</div>
+                <div class="timeline-panel">
+                  <p>Hiện đại hóa toàn diện, đổi mới chương trình, nội dung, phương pháp đào tạo và nâng cao chất lượng nghiên cứu khoa học quân sự.</p>
+                </div>
+              </div>
+
+              <div class="timeline-card">
+                <div class="timeline-dot"></div>
+                <div class="year">2027</div>
+                <div class="timeline-panel">
+                  <p>Kỷ niệm 50 năm ngày truyền thống, tiếp tục khẳng định niềm tự hào, trách nhiệm và khát vọng phát triển trong giai đoạn mới.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -884,9 +973,10 @@
       <div class="container">
         <div class="section-card theme-3">
           <div class="section-title">
-            <div class="kicker">DẤU ẤN & THÀNH TỰU</div>
+            <div class="kicker">CHUYÊN ĐỀ 03 • DẤU ẤN & THÀNH TỰU</div>
             <h2>Hoạt động nổi bật</h2>
             <p>Những hoạt động tiêu biểu góp phần khẳng định vị thế, uy tín và truyền thống vẻ vang của Học viện Quốc phòng trong hệ thống giáo dục, đào tạo của Quân đội.</p>
+            <div class="curator-line"></div>
           </div>
 
           <div class="feature-grid">
@@ -920,9 +1010,10 @@
       <div class="container">
         <div class="section-card theme-4">
           <div class="section-title">
-            <div class="kicker">NGƯỜI ĐẶT NỀN MÓNG</div>
+            <div class="kicker">CHUYÊN ĐỀ 04 • NHỮNG NGƯỜI ĐẶT NỀN MÓNG</div>
             <h2>Lãnh đạo qua các thời kỳ</h2>
             <p>Các thế hệ lãnh đạo đã góp phần quan trọng trong việc xây dựng, phát triển Học viện Quốc phòng ngày càng vững mạnh, chính quy, hiện đại.</p>
+            <div class="curator-line"></div>
           </div>
 
           <div class="leader-wrap">
@@ -961,9 +1052,10 @@
       <div class="container">
         <div class="section-card theme-5">
           <div class="section-title">
-            <div class="kicker">CẢM XÚC TỰ HÀO</div>
+            <div class="kicker">CHUYÊN ĐỀ 05 • CẢM XÚC TỰ HÀO</div>
             <h2>Bài viết của cán bộ, học viên</h2>
             <p>Những dòng cảm xúc chân thành, sâu sắc về chặng đường 50 năm của Học viện Quốc phòng, nơi hun đúc bản lĩnh, trí tuệ và niềm tự hào của nhiều thế hệ.</p>
+            <div class="curator-line"></div>
           </div>
 
           <div class="testimonial-duo">
@@ -990,9 +1082,10 @@
       <div class="container">
         <div class="section-card theme-6">
           <div class="section-title">
-            <div class="kicker">THỬ THÁCH TRÍ TUỆ</div>
+            <div class="kicker">CHUYÊN ĐỀ 06 • THỬ THÁCH TRÍ TUỆ</div>
             <h2>Trò chơi tìm hiểu 50 năm</h2>
             <p>Không gian tương tác sinh động giúp cán bộ, học viên, nhân viên và người xem ôn lại chặng đường vẻ vang của Học viện Quốc phòng theo cách gần gũi, hấp dẫn hơn.</p>
+            <div class="curator-line"></div>
           </div>
 
           <div class="game-row">
@@ -1024,27 +1117,47 @@
       <div class="container">
         <div class="section-card theme-7">
           <div class="section-title">
-            <div class="kicker">TƯ LIỆU HÌNH ẢNH</div>
+            <div class="kicker">CHUYÊN ĐỀ 07 • TƯ LIỆU HÌNH ẢNH</div>
             <h2>Khoảnh khắc 50 năm</h2>
-            <p>Những hình ảnh tư liệu và hoạt động tiêu biểu ghi dấu chặng đường phát triển của Học viện Quốc phòng, từ truyền thống đến hiện đại.</p>
+            <p>Những hình ảnh tư liệu và hoạt động tiêu biểu ghi dấu chặng đường phát triển của Học viện Quốc phòng, được trình bày như những khung trưng bày trong một không gian triển lãm số.</p>
+            <div class="curator-line"></div>
           </div>
 
           <div class="gallery-grid">
-            <div class="card gallery-item">
-              <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80');"></div>
-              <div class="gallery-caption">Những ngày đầu thành lập (1977)</div>
+            <div class="gallery-frame">
+              <div class="gallery-item">
+                <div class="gallery-inner">
+                  <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80');"></div>
+                  <div class="gallery-caption">Những ngày đầu thành lập (1977)</div>
+                </div>
+              </div>
             </div>
-            <div class="card gallery-item">
-              <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80');"></div>
-              <div class="gallery-caption">Lễ kỷ niệm các thế hệ cán bộ</div>
+
+            <div class="gallery-frame">
+              <div class="gallery-item">
+                <div class="gallery-inner">
+                  <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80');"></div>
+                  <div class="gallery-caption">Lễ kỷ niệm các thế hệ cán bộ</div>
+                </div>
+              </div>
             </div>
-            <div class="card gallery-item">
-              <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80');"></div>
-              <div class="gallery-caption">Giảng đường – nghiên cứu khoa học</div>
+
+            <div class="gallery-frame">
+              <div class="gallery-item">
+                <div class="gallery-inner">
+                  <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80');"></div>
+                  <div class="gallery-caption">Giảng đường – nghiên cứu khoa học</div>
+                </div>
+              </div>
             </div>
-            <div class="card gallery-item">
-              <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1000&q=80');"></div>
-              <div class="gallery-caption">Hợp tác quốc tế & giao lưu học thuật</div>
+
+            <div class="gallery-frame">
+              <div class="gallery-item">
+                <div class="gallery-inner">
+                  <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1000&q=80');"></div>
+                  <div class="gallery-caption">Hợp tác quốc tế & giao lưu học thuật</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
