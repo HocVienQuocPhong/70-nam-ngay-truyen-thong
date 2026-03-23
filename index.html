@@ -158,60 +158,6 @@
   text-transform: uppercase;
 }
 
-    /* ===== NAV ===== */
-.nav-wrap {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  padding: 0;                     /* bỏ padding để sát header */
-  background: rgba(238, 244, 240, 0.85);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(26, 62, 58, 0.08);
-}
-
-.nav-shell {
-  background: rgba(255, 255, 252, 0.96);
-  border-radius: 0;
-  border: none;
-  box-shadow: none;
-  padding: 8px 0;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.nav-links a {
-  padding: 10px 18px;
-  border-radius: 40px;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: #2a5a54;
-  letter-spacing: 0.3px;
-  transition: all 0.2s ease;
-  text-decoration: none;
-  text-transform: capitalize;    /* chỉ viết hoa chữ cái đầu, tự nhiên hơn */
-}
-
-.nav-links a:hover {
-  background: rgba(219, 164, 90, 0.14);
-  color: #b87a2e;
-}
-
-.nav-links a.active-like {
-  background: linear-gradient(135deg, rgba(219, 164, 90, 0.16), rgba(219, 164, 90, 0.08));
-  color: #c28632;
-  font-weight: 700;
-}
-/* Section giá trị cốt lõi sát menu hơn */
-#giatri {
-  padding-top: 24px !important;  /* giảm khoảng cách so với menu */
-}
-    
     /* ===== SECTION SHARED ===== */
     .section{
       padding:100px 0;
@@ -1220,82 +1166,171 @@
     background: linear-gradient(to right, transparent, rgba(180,150,70,0.32), transparent);
   }
 }
-/* ===== MENU NGANG + KHỐI HỘI PHỤ NỮ ===== */
+/* ===== NAV PREMIUM - HỘI PHỤ NỮ HVQP ===== */
 .nav-wrap {
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(12px);
-  background: rgba(15, 25, 35, 0.75);
+  background: rgba(15, 25, 35, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .nav-shell {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  gap: 24px;
+  padding: 12px 0;
 }
 
-/* LEFT BRAND */
+/* Khối nhận diện bên trái */
 .nav-brand {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  min-width: 280px;
   line-height: 1.2;
 }
 
-.brand-main {
+.nav-brand .brand-main {
   font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  color: #f5d27a; /* vàng quân đội */
-}
-
-.brand-sub {
-  font-size: 11px;
-  color: rgba(255,255,255,0.7);
-  letter-spacing: 1px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
   text-transform: uppercase;
+  color: #f3d27a;
 }
 
-/* MENU */
+.nav-brand .brand-sub {
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.72);
+}
+
+/* Menu bên phải */
 .nav-links {
   display: flex;
-  gap: 26px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .nav-links a {
   position: relative;
+  display: inline-block;
+  padding: 6px 0;
   font-size: 13px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: rgba(255,255,255,0.75);
-  transition: all 0.3s ease;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.78);
+  transition: color 0.28s ease, transform 0.28s ease;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
-  color: #f5d27a;
+  color: #f3d27a;
+  transform: translateY(-1px);
 }
 
-/* underline effect xịn */
 .nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
-  width: 0%;
+  bottom: -7px;
+  width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #f5d27a, #b88945);
-  transition: 0.3s;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f3d27a, #b88945);
+  transition: width 0.28s ease;
 }
 
 .nav-links a:hover::after,
-.nav-links .active-like::after {
+.nav-links a.active-like::after {
   width: 100%;
 }
 
-.active-like {
+.nav-links a.active-like {
   color: #ffffff;
+}
+
+/* Cho section đầu sát menu hơn */
+#giatri {
+  padding-top: 28px !important;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1100px) {
+  .nav-shell {
+    gap: 18px;
+  }
+
+  .nav-brand {
+    min-width: 240px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-shell {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 0;
+  }
+
+  .nav-brand {
+    min-width: unset;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-wrap {
+    background: rgba(15, 25, 35, 0.9);
+  }
+
+  .nav-brand .brand-main {
+    font-size: 11px;
+    letter-spacing: 0.9px;
+  }
+
+  .nav-brand .brand-sub {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+
+  .nav-links {
+    gap: 10px 14px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
 }
   </style>
 </head>
@@ -1490,9 +1525,9 @@
 
               <div class="timeline-card">
                 <div class="timeline-dot"></div>
-                <div class="year">2012</div>
+                <div class="year">18/7/2003</div>
                 <div class="timeline-panel">
-                  <p>Hiện đại hóa toàn diện, đổi mới chương trình, nội dung, phương pháp đào tạo và nâng cao chất lượng nghiên cứu khoa học quân sự.</p>
+                  <p>Tổng Tham mưu trưởng ký Quyết định về tổ chức biên chế của Học viện Quốc phòng.</p>
                 </div>
               </div>
 
@@ -1528,7 +1563,7 @@
             </div>
             <div class="card feature-card">
               <div class="feature-icon">📚</div>
-              <h3>Nghiên cứu khoa học quân sự</h3>
+              <h3>Nghiên cứu khoa học Nghệ thuật quân sự</h3>
               <p>Thực hiện nhiều đề tài, công trình nghiên cứu có giá trị lý luận và thực tiễn cao, góp phần phát triển nghệ thuật quân sự Việt Nam và phục vụ nhiệm vụ bảo vệ Tổ quốc.</p>
             </div>
             <div class="card feature-card">
@@ -1552,36 +1587,61 @@
         <div class="section-card theme-4">
           <div class="section-title">
             <div class="kicker">NHỮNG NGƯỜI ĐẶT NỀN MÓNG</div>
-            <h2>Lãnh đạo qua các thời kỳ</h2>
+            <h2>Giám đốc Học viện qua các thời kỳ</h2>
             <p>Các thế hệ lãnh đạo đã góp phần quan trọng trong việc xây dựng, phát triển Học viện Quốc phòng ngày càng vững mạnh, chính quy, hiện đại.</p>
             <div class="curator-line"></div>
           </div>
 
           <div class="leader-wrap">
+             <div class="card leader-item">
+              <div class="avatar-symbol">⭐</div>
+              <h4>Đại tướng Lê Trọng Tấn</h4>
+              <p>1976–1977</p>
+            </div>
             <div class="card leader-item">
               <div class="avatar-symbol">⭐</div>
               <h4>Thượng tướng Hoàng Minh Thảo</h4>
-              <p>Giám đốc xxxx–xxxx</p>
+              <p>977–1989</p>
             </div>
             <div class="card leader-item">
               <div class="avatar-symbol">⭐</div>
-              <h4>Thượng tướng...</h4>
-              <p>xxxx–xxxx</p>
+              <h4>Trung tướng Đỗ Trình</h4>
+              <p>1989–1991</p>
             </div>
             <div class="card leader-item">
               <div class="avatar-symbol">⭐</div>
-              <h4>Trung tướng....</h4>
-              <p>xxxx–xxxx</p>
+              <h4>Thượng tướng Nguyễn Hữu An</h4>
+              <p>1991–1995</p>
             </div>
             <div class="card leader-item">
               <div class="avatar-symbol">⭐</div>
-              <h4>Trung tướng Nguyễn Tiến Trung </h4>
-              <p>xxxx–xxxx</p>
+              <h4>Trung tướng Nguyễn Hải Bằng</h4>
+              <p>1995–1997</p>
+            </div>
+            <div class="card leader-item">
+              <div class="avatar-symbol">⭐</div>
+              <h4>Thượng tướng Nguyễn Thế Trị</h4>
+              <p>1997–2007</p>
+            </div>
+          <div class="card leader-item">
+              <div class="avatar-symbol">⭐</div>
+              <h4>Trung tướng Phạm Xuân Hùng</h4>
+              <p>2007–2008</p>
+            </div>
+             <div class="card leader-item">
+              <div class="avatar-symbol">⭐</div>
+              <h4>Trung tướng Nguyễn Như Hoạt</h4>
+              <p>2008–2010:</p>
+            </div>
+          <div class="card leader-item">
+              <div class="avatar-symbol">⭐</div>
+              <h4>Thượng tướng Võ Tiến Trung</h4>
+              <p>2010–2016</p>
             </div>
             <div class="card leader-item">
               <div class="avatar-symbol">⭐</div>
               <h4>Thượng tướng Trần Việt Khoa</h4>
-              <p>2018–2027</p>
+              <p>2016–nay</p>
             </div>
           </div>
         </div>
