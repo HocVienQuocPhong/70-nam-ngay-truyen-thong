@@ -1807,6 +1807,28 @@ body {
     padding:20px 18px;
   }
 }
+
+  /* === THU HẸP KHOẢNG CÁCH GIỮA MENU VÀ SECTION ĐẦU TIÊN === */
+#giatri.premium-core-section {
+  padding-top: 0 !important;   /* xóa padding trên của section */
+}
+#giatri.premium-core-section .premium-core-wrap {
+  padding-top: 28px !important; /* giảm padding trên của khung card */
+  padding-bottom: 28px !important;
+}
+/* Điều chỉnh thêm cho tablet/mobile */
+@media (max-width: 860px) {
+  #giatri.premium-core-section .premium-core-wrap {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+}
+@media (max-width: 640px) {
+  #giatri.premium-core-section .premium-core-wrap {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+}
   </style>
 </head>
   
