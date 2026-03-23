@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết bài viết | 50 năm Học viện Quốc phòng</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#eef4f0;
+      --surface:#ffffff;
+      --deep:#1a3e3a;
+      --text:#1e3a35;
+      --muted:#557a72;
+      --gold:#dba45a;
+      --gold-2:#c28632;
+      --line:rgba(26,62,58,0.08);
+      --shadow-main:0 20px 46px rgba(18,32,28,0.06);
+      --shadow-card:0 12px 28px rgba(26,62,58,0.06);
+    }
+    body{
+      font-family:'Inter',system-ui,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.8;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px, calc(100% - 36px));margin:0 auto}
+    .page-wrap{padding:34px 0 80px}
+    .back-link{
+      display:inline-flex;
+      padding:10px 16px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid rgba(26,62,58,0.1);
+      font-weight:700;
+      color:var(--deep);
+      margin-bottom:18px;
+    }
+    .article-shell{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      box-shadow:var(--shadow-main);
+      overflow:hidden;
+    }
+    .article-cover{
+      aspect-ratio: 16 / 7;
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+    .article-body{
+      padding:34px 34px 40px;
+    }
+    .article-badge{
+      display:inline-flex;
+      padding:7px 14px;
+      border-radius:999px;
+      background:rgba(219,164,90,0.14);
+      color:#a36a20;
+      font-size:.74rem;
+      font-weight:800;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+    .article-meta{
+      color:#768580;
+      font-size:.95rem;
+      margin-bottom:14px;
+    }
+    .article-title{
+      font-size:clamp(2rem,4vw,3rem);
+      line-height:1.18;
+      font-weight:900;
+      color:var(--deep);
+      margin-bottom:18px;
+    }
+    .article-content{
+      font-size:1rem;
+      color:var(--text);
+    }
+    .article-content p{
+      margin-bottom:16px;
+    }
+    .related-section{
+      margin-top:34px;
+      padding-top:26px;
+      border-top:1px solid rgba(26,62,58,0.08);
+    }
+    .related-section h3{
+      color:var(--deep);
+      font-size:1.2rem;
+      font-weight:800;
+      margin-bottom:16px;
+    }
+    .related-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+    }
+    .related-card{
+      overflow:hidden;
+      background:#fff;
+      border:1px solid rgba(26,62,58,0.08);
+      border-radius:20px;
+      box-shadow:var(--shadow-card);
+    }
+    .related-thumb{
+      aspect-ratio:16/10;
+      background-size:cover;
+      background-position:center;
+    }
+    .related-body{padding:14px}
+    .related-body h4{
+      color:var(--deep);
+      font-size:.98rem;
+      line-height:1.45;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+    .empty-box{
+      background:#fff;
+      border-radius:28px;
+      border:1px dashed rgba(26,62,58,0.14);
+      padding:30px 18px;
+      text-align:center;
+      color:var(--muted);
+    }
+    @media (max-width: 860px){
+      .related-grid{grid-template-columns:1fr}
+      .article-body{padding:24px 18px 30px}
+    }
+  </style>
+</head>
+<body>
+  <main class="page-wrap">
+    <div class="container">
+      <a href="cam-xuc-tu-hao.html" class="back-link">← Quay lại danh sách bài viết</a>
+      <div id="articleDetail"></div>
+    </div>
+  </main>
+
+  <script src="assets/data/articles.js"></script>
+  <script>
+    function formatVietnameseDate(dateString) {
+      const d = new Date(dateString);
+      if (Number.isNaN(d.getTime())) return dateString;
+      return d.toLocaleDateString("vi-VN");
+    }
+
+    function getArticleIdFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("id");
+    }
+
+    function renderArticleDetail() {
+      const articleId = getArticleIdFromUrl();
+      const data = Array.isArray(window.ARTICLE_DATA) ? window.ARTICLE_DATA : [];
+      const article = data.find(item => item.id === articleId);
+      const box = document.getElementById("articleDetail");
+
+      if (!article) {
+        box.innerHTML = `<div class="empty-box">Không tìm thấy bài viết.</div>`;
+        return;
+      }
+
+      const related = data
+        .filter(item => item.id !== article.id)
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .slice(0, 3);
+
+      box.innerHTML = `
+        <article class="article-shell">
+          <div class="article-cover" style="background-image:url('${article.thumbnail}')"></div>
+          <div class="article-body">
+            <span class="article-badge">${article.category || "Bài viết"}</span>
+            <div class="article-meta">${article.author} • ${article.unit || ""} • ${formatVietnameseDate(article.date)}</div>
+            <h1 class="article-title">${article.title}</h1>
+            <div class="article-content">${article.content}</div>
+
+            ${related.length ? `
+              <section class="related-section">
+                <h3>Bài viết liên quan</h3>
+                <div class="related-grid">
+                  ${related.map(item => `
+                    <a class="related-card" href="bai-viet.html?id=${item.id}">
+                      <div class="related-thumb" style="background-image:url('${item.thumbnail}')"></div>
+                      <div class="related-body">
+                        <div class="article-meta">${item.author} • ${formatVietnameseDate(item.date)}</div>
+                        <h4>${item.title}</h4>
+                      </div>
+                    </a>
+                  `).join("")}
+                </div>
+              </section>
+            ` : ""}
+          </div>
+        </article>
+      `;
+
+      document.title = `${article.title} | 50 năm Học viện Quốc phòng`;
+    }
+
+    document.addEventListener("DOMContentLoaded", renderArticleDetail);
+  </script>
+</body>
+</html>
