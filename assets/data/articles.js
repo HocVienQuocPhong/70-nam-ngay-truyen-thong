@@ -12,7 +12,7 @@ window.ARTICLE_DATA = [
     content: `
       <p>Trong dòng chảy 50 năm xây dựng, chiến đấu và trưởng thành, Học viện Quốc phòng đã khẳng định vị thế là trung tâm đào tạo, bồi dưỡng cán bộ cấp chiến dịch, chiến lược của Quân đội nhân dân Việt Nam.</p>
        <figure class="article-figure">
-        <img src="assets/images/articles/bai-001-01.jpg" alt="Hoạt động tại Học viện Quốc phòng">
+        <img src="assets/images/articles/bai-001-01.jpg" alt="Khai giảng năm học mới">
         <figcaption>Khoảnh khắc ghi dấu niềm tự hào trong các hoạt động kỷ niệm tại Học viện.</figcaption>
       </figure>
       <p>Mỗi dấu mốc phát triển của Học viện là kết tinh của trí tuệ, bản lĩnh, tinh thần đoàn kết và sự cống hiến bền bỉ của nhiều thế hệ cán bộ, giảng viên, học viên.</p>
