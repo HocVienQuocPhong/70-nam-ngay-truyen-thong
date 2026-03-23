@@ -1167,14 +1167,14 @@
   }
 }
 /* ===== NAV PREMIUM - HỘI PHỤ NỮ HVQP ===== */
-/* ===== MENU NGANG HIỆN ĐẠI ===== */
+/* ===== MENU NGANG - TÔNG MÀU NỔI BẬT, HÀI HÒA VỚI HEADER ===== */
 .nav-wrap {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(238, 244, 240, 0.88);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(26, 62, 58, 0.06);
+  background: rgba(238, 244, 240, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(26, 62, 58, 0.12);
 }
 
 .nav-shell {
@@ -1182,34 +1182,37 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px;
   padding: 8px 0;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-/* Khối Hội Phụ nữ bên trái */
+/* Khối Hội Phụ nữ bên trái - nổi bật, ấm cúng */
 .nav-brand {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(219, 164, 90, 0.08);
+  background: linear-gradient(135deg, rgba(219, 164, 90, 0.2), rgba(219, 164, 90, 0.1));
   border-radius: 60px;
-  padding: 8px 18px 8px 14px;
-  transition: all 0.2s ease;
-  border: 1px solid rgba(219, 164, 90, 0.2);
+  padding: 8px 20px 8px 16px;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(219, 164, 90, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .nav-brand:hover {
-  background: rgba(219, 164, 90, 0.14);
-  border-color: rgba(219, 164, 90, 0.4);
+  background: linear-gradient(135deg, rgba(219, 164, 90, 0.28), rgba(219, 164, 90, 0.16));
+  border-color: rgba(219, 164, 90, 0.6);
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .nav-brand-icon {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05));
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.08));
+  color: #c28632;
 }
 
 .nav-brand-text {
@@ -1217,51 +1220,51 @@
 }
 
 .brand-main {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 800;
-  color: #1a3e3a;
-  letter-spacing: 0.3px;
+  color: #1e4a42;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
 .brand-sub {
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: #c28632;
-  letter-spacing: 0.8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #b87a2e;
+  letter-spacing: 1px;
   text-transform: uppercase;
   margin-top: 2px;
 }
 
-/* Menu bên phải */
+/* Menu bên phải - chữ đậm, màu xanh đậm */
 .nav-links {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
 .nav-links a {
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 40px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #2a5a54;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e5a50;
   transition: all 0.2s ease;
   text-transform: capitalize;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
 }
 
 .nav-links a:hover {
-  background: rgba(219, 164, 90, 0.12);
+  background: rgba(219, 164, 90, 0.2);
   color: #b87a2e;
 }
 
 .nav-links a.active-like {
-  background: linear-gradient(135deg, rgba(219, 164, 90, 0.14), rgba(219, 164, 90, 0.08));
+  background: linear-gradient(135deg, rgba(219, 164, 90, 0.22), rgba(219, 164, 90, 0.12));
   color: #c28632;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /* Responsive */
@@ -1271,40 +1274,37 @@
     align-items: stretch;
     padding: 12px 20px;
   }
-
   .nav-brand {
     align-self: flex-start;
   }
-
   .nav-links {
     justify-content: center;
     gap: 8px;
   }
-
   .nav-links a {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+    padding: 6px 14px;
+    font-size: 0.82rem;
   }
 }
 
 @media (max-width: 640px) {
   .nav-brand {
-    padding: 6px 14px 6px 10px;
-    gap: 8px;
+    padding: 6px 16px 6px 12px;
+    gap: 10px;
   }
   .nav-brand-icon {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   .brand-main {
-    font-size: 0.68rem;
-    white-space: normal;    /* cho phép xuống dòng trên mobile */
+    font-size: 0.72rem;
+    white-space: normal;
   }
   .brand-sub {
-    font-size: 0.58rem;
+    font-size: 0.62rem;
   }
   .nav-links a {
-    padding: 5px 10px;
-    font-size: 0.7rem;
+    padding: 5px 12px;
+    font-size: 0.75rem;
   }
 }
   </style>
