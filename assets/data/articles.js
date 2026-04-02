@@ -22,8 +22,8 @@ window.ARTICLE_DATA = [
   {
     id: "cam-xuc-002",
     title: "Ký ức đẹp về ngôi trường mang tầm vóc chiến lược",
-    author: "Phạm Hồng Hải",
-    unit: "Khoa HC-KT",
+    author: "Trần Thị Hải Hà",
+    unit: "Khoa Trinh sát",
     date: "2026-03-18",
     category: "Ký ức",
     featured: true,
