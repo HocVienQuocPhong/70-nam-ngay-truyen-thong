@@ -1,4 +1,32 @@
 window.ARTICLE_DATA = [
+  // ===== TIN TỨC =====
+  {
+    id: "news-001",
+    type: "news",
+    isFeatured: true,
+    title: "Giá xăng dầu tăng, có loại vượt 40.000 đồng/lít",
+    author: "Ban Biên tập",
+    date: "2026-04-03",
+    category: "Thời sự",
+    thumbnail: "assets/images/articles/bai-001.jpg",
+    excerpt: "Liên Bộ Công Thương - Tài chính vừa điều chỉnh giá...",
+    content: `<p>Nội dung chi tiết...</p>`
+  },
+
+  {
+    id: "news-002",
+    type: "news",
+    isFeatured: true,
+    title: "Luật Đô thị đặc biệt sẽ giúp TPHCM tăng trưởng vượt bậc",
+    author: "Ban Biên tập",
+    date: "2026-04-02",
+    category: "Kinh tế",
+    thumbnail: "assets/images/articles/bai-002.jpg",
+    excerpt: "Chính sách mới giúp thành phố phát triển...",
+    content: `<p>Nội dung...</p>`
+  },
+
+  // ===== CẢM NGHĨ (giữ nguyên) =====
   {
     id: "cam-xuc-001",
     title: "Tự hào tiếp bước truyền thống vẻ vang của Học viện Quốc phòng",
