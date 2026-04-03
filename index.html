@@ -1279,8 +1279,8 @@
 }
 
 .nav-links a:hover {
-  background: rgba(219, 164, 90, 0.18);
-  color: #b87a2e;
+   background: rgba(200,90,124,0.18);
+  color:#c85a7c;
 }
 
 .nav-links a.active-like {
@@ -1592,8 +1592,8 @@ body {
   width:max-content;
   padding:7px 14px;
   border-radius:999px;
-  background:rgba(219,164,90,0.14);
-  color:#a36a20;
+   background: rgba(200,90,124,0.12);
+  color:#c85a7c;
   font-size:.74rem;
   font-weight:800;
   letter-spacing:.8px;
@@ -1829,6 +1829,88 @@ body {
     padding-bottom: 16px !important;
   }
 }
+    /* ===== PORTAL STYLE ===== */
+.portal-home{
+  margin: 18px 0 10px;
+}
+
+.portal-grid{
+  display:grid;
+  grid-template-columns: 2fr 1.2fr 1fr;
+  gap:18px;
+}
+
+/* LEFT */
+.portal-main-news{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:var(--shadow-card);
+}
+
+.portal-main-news img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+.portal-main-content{
+  padding:16px;
+}
+
+.portal-main-content h3{
+  font-size:1.1rem;
+  font-weight:800;
+  margin:8px 0;
+}
+
+.badge-hot{
+  background:#c85a7c;
+  color:#fff;
+  font-size:0.7rem;
+  padding:4px 10px;
+  border-radius:999px;
+}
+
+/* CENTER */
+.portal-box{
+  background:#fff;
+  border-radius:18px;
+  padding:14px;
+  box-shadow:var(--shadow-card);
+}
+
+.portal-box h4{
+  font-size:0.9rem;
+  font-weight:800;
+  margin-bottom:10px;
+  color:#1e4a42;
+}
+
+.portal-box ul{
+  list-style:none;
+  padding:0;
+}
+
+.portal-box li{
+  padding:8px 0;
+  border-bottom:1px solid #eee;
+  font-size:0.88rem;
+}
+
+/* RIGHT */
+.portal-banner img{
+  width:100%;
+  border-radius:14px;
+  margin-top:12px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .portal-grid{
+    grid-template-columns:1fr;
+  }
+}
   </style>
 </head>
   
@@ -1876,6 +1958,52 @@ body {
     </div>
   </div>
 </div>
+  <!-- ===== PORTAL HOME (TIN TỨC KIỂU HỘI PHỤ NỮ) ===== -->
+<section class="portal-home">
+  <div class="container portal-grid">
+
+    <!-- LEFT: TIN NỔI BẬT -->
+    <div class="portal-left">
+      <div class="portal-main-news">
+        <img src="anh1.jpg" onerror="this.src='https://placehold.co/600x350'">
+        <div class="portal-main-content">
+          <span class="badge-hot">NỔI BẬT</span>
+          <h3>Hội Phụ nữ Học viện Quốc phòng đẩy mạnh chuyển đổi số trong điều hành</h3>
+          <p>Ứng dụng công nghệ số giúp nâng cao hiệu quả quản lý, điều hành và kết nối hội viên trong toàn Học viện.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTER: TIN MỚI -->
+    <div class="portal-center">
+      <div class="portal-box">
+        <h4>TIN MỚI NHẤT</h4>
+        <ul>
+          <li>Phụ nữ Học viện tích cực hưởng ứng phong trào thi đua 2026</li>
+          <li>Tổ chức sinh hoạt chuyên đề chuyển đổi số</li>
+          <li>Giao lưu học thuật với các học viện quân sự</li>
+          <li>Phát huy vai trò phụ nữ trong xây dựng đơn vị vững mạnh</li>
+          <li>Hoạt động kỷ niệm 50 năm ngày truyền thống</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT: LỊCH + BANNER -->
+    <div class="portal-right">
+      <div class="portal-box">
+        <h4>LỊCH CÔNG TÁC</h4>
+        <p>Thứ 2: Sinh hoạt hội</p>
+        <p>Thứ 4: Hội thảo chuyên đề</p>
+        <p>Thứ 6: Tổng kết tuần</p>
+      </div>
+
+      <div class="portal-banner">
+        <img src="banner1.jpg" onerror="this.src='https://placehold.co/300x200'">
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <main>
     <!-- GIÁ TRỊ CỐT LÕI -->
@@ -2102,7 +2230,7 @@ body {
             <div class="card leader-item">
               <div class="avatar-symbol">⭐</div>
               <h4>Thượng tướng Hoàng Minh Thảo</h4>
-              <p>977–1989</p>
+              <p>1977–1989</p>
             </div>
             <div class="card leader-item">
               <div class="avatar-symbol">⭐</div>
